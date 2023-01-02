@@ -1,0 +1,48 @@
+1. Yes, Abstraction is used to hide the implementation of methods using Interfaces.
+	Encapsulation used to ristrict our code to either read only or Wright only or both 
+	by using getter and setter methods.
+
+2. Is a relation ships occour only when the Child class is extends to Parent class, and create
+	the instance of object in the child class. but in HAS-A relation ship we can establish the 
+	connection between two classes by creating the instance of another class, without extending any
+	class.
+
+3. Because of Ambiguity, In Multiple Inheritance child class extends two or more parent class, the 
+	problem is if the parent class contains same method then Ambiguity is happens. So java doesn't 
+	support Multiple Inheritance by class. We can make use of Multiple Inheritance using interfaces.
+
+7. equals() method is refering the object of veriable, where == is refering the address of veriable.
+
+8. By creating Enum class, using Final keyword to the constant Decleration we can create constants 
+	in Java.
+
+9. Public : Publi Members can be accsseble by any package in java it has no limits, class, method ,
+				constructor can be public.
+	Private : Private members is only accessable in the same class, method and constructor And class 
+				Can be private, but class cannot have relation Ship with other class.
+	Protected : Private members can also accessable in any package but only through the Inheritance.
+
+10. Wrapper class helps us to make our program completely object oriented programing. It come over
+	with the concepts of reemoving the primitive datatypes in our programs. It privide some dataype 
+	Similar to the primitive datatypes, Wrapper Class datatypes are of Object Level.
+
+11. System.gc() method is used to call Grabage Collector in our program, 
+	Runtime.gc() method is used to call Garbage Collector only at the RunTime.
+
+12. * Heap memory can store the Duplicates, stack cannot store any duplicates.
+	* Heap objects can be modified, Stack objects cannot be modified.
+	* Heap not memory efficent, Stack is momory efficent due to it does not allow any duplicates.
+	* Heap is fast compared to Stack, Stack is bit Slow.
+
+14. Marker Interface haing the abstract keyword by default its method members are public staic
+	and thus it called as Marker Interface.
+
+15. Final Keyword in Veriables : It is commonly used to declare Constants where the constants canot 
+										changed, It make user to declare and intialize in the same line
+										it can't offer  you to intialize in further.
+	Final keyword in Methods : Method cannot be override, due to final.
+	Final KeyWord in class : cannot Inherit.
+
+	* Static is Non access specifiers, final is a keyword.
+	* Static members can be use without creation of object, final members accessed only by creating 
+		instance of object.
