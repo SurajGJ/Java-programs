@@ -29,7 +29,7 @@ public class InstituteServiceImpl implements InstituteService {
 	@Override
 	public boolean updateLocationByIndex(String location, int index) {
 		if (location != null && location.length() > 3) {
-			List<InstituteDto> database = repo.updateLocationByIndex();
+			List<InstituteDto> database = repo.read();
 			if (index >= 0 && index <= database.size()) {
 				InstituteDto dto = database.get(index);
 				dto.setLocation(location);
@@ -46,7 +46,7 @@ public class InstituteServiceImpl implements InstituteService {
 	public boolean updateCourseByName(String course, String name) {
 		if (course != null && course.length() > 2) {
 			if (name != null && name.length() > 3) {
-				List<InstituteDto> database = repo.updateCourseByName();
+				List<InstituteDto> database = repo.read();
 				for (int i = 0; i < database.size(); i++) {
 					InstituteDto dto = database.get(i);
 					if (dto.getName().equalsIgnoreCase(name)) {
@@ -64,11 +64,10 @@ public class InstituteServiceImpl implements InstituteService {
 	@Override
 	public boolean deleteByRating(int rating) {
 		if (rating > 0 && rating <= 5) {
-			Iterator<InstituteDto> delete = repo.deleteByRating().iterator();
+			Iterator<InstituteDto> delete = repo.read().iterator();
 			while (delete.hasNext()) {
 				InstituteDto dto = delete.next();
 				if (dto.getRating() == rating) {
-					System.out.println("hello");
 					delete.remove();
 				}
 			}
@@ -83,7 +82,7 @@ public class InstituteServiceImpl implements InstituteService {
 	public InstituteDto findByNameAndCourse(String name, String course) {
 		if (name != null && name.length() >= 2) {
 			if (course != null && course.length() > 2) {
-				List<InstituteDto> data = repo.findByNameAndCourse();
+				List<InstituteDto> data = repo.read();
 				for (InstituteDto dto : data) {
 					if (dto.getName().equalsIgnoreCase(name) && dto.getCourse().equalsIgnoreCase(course)) {
 						return dto;
@@ -100,7 +99,7 @@ public class InstituteServiceImpl implements InstituteService {
 	public InstituteDto findByLoacationandRating(String location, int rating) {
 		if (location != null && location.length() >= 3) {
 			if (rating >= 0 && rating <= 5) {
-				List<InstituteDto> data = repo.findByLocationAndRating();
+				List<InstituteDto> data = repo.read();
 				for (InstituteDto dto : data) {
 					if (dto.getLocation().equalsIgnoreCase(location) && dto.getRating() == rating) {
 						return dto;

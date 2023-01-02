@@ -20,31 +20,4 @@ public class InstituteRepoImpl implements InstituteRepo {
 		return database;
 	}
 
-	@Override
-	public List<InstituteDto> updateLocationByIndex() {
-		return database;
-	}
-
-	@Override
-	public List<InstituteDto> updateCourseByName() {
-		
-		return database;
-	}
-
-	@Override
-	public List<InstituteDto> deleteByRating() {
-		
-		return database;
-	}
-	
-	@Override
-	public List<InstituteDto> findByNameAndCourse() {
-		return database;	
-	}
-
-	@Override
-	public List<InstituteDto> findByLocationAndRating() {
-		return database;
-	}
-
 }

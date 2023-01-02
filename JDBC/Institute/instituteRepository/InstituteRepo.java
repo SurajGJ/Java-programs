@@ -10,16 +10,4 @@ public interface InstituteRepo {
 
 	public List<InstituteDto> read();
 
-	public List<InstituteDto> updateLocationByIndex();
-
-	public List<InstituteDto> updateCourseByName();
-
-	public List<InstituteDto> deleteByRating();
-
-	public List<InstituteDto> findByNameAndCourse();
-
-	public List<InstituteDto> findByLocationAndRating();
-
-	
-
 }
