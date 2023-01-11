@@ -33,15 +33,17 @@ public class SoapsRunner {
 //		repo.save(dto10);
 
 		
-//		for(SoapsDto list : repo.read()) {
-//			System.out.println(list);
-//		}
+		for(SoapsDto list : repo.read()) {
+			System.out.println(list);
+		}
 		
-		//System.out.println(repo.findByNameAndPrice("Lux", 40 ));
-//		repo.updateNamebyPrice("Santoor", 20);
+		System.out.println(repo.findByNameAndPrice("Lux", 40 ));
+		repo.updateNamebyPrice("Santoor", 20);
 		
 		repo.updateColorAndFragranceByName("White", "Sun Flower", "PetAg");
 		repo.updateTypeById("Cleaning", 1);
+		
+		repo.deleteByName("Santoor");
 	}
 
 }

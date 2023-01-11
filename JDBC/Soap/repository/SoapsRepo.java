@@ -17,4 +17,6 @@ public interface SoapsRepo {
 	public boolean updateColorAndFragranceByName(String color, String fra, String name);
 
 	public boolean updateTypeById(String type, int id);
+	
+	public boolean deleteByName(String name);
 }

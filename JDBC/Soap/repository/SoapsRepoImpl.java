@@ -213,4 +213,31 @@ public class SoapsRepoImpl implements SoapsRepo {
 		return false;
 	}
 
+	@Override
+	public boolean deleteByName(String name) {
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			Connection connection = DriverManager.getConnection(MySqlCredentials.URL.getValue(),
+					MySqlCredentials.USERNAME.getValue(), MySqlCredentials.PASSWORD.getValue());
+
+			String query = "delete from soaps_info where name = ?";
+
+			PreparedStatement statement = connection.prepareStatement(query);
+			
+			statement.setString(1, name);
+			statement.executeUpdate();
+			
+			statement.close();
+			connection.close();
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return false;
+	}
+
 }
