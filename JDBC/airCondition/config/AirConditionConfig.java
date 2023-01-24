@@ -38,7 +38,7 @@ public class AirConditionConfig {
 			return sessionFactory;
 		}
 		
-		return null;
+		return sessionFactory;
 	}
 	
 }
